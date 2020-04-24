@@ -1,7 +1,8 @@
 const Text = require('../models/text')
 
 //welcome
-exports.index = (req,res) => {res.send('should be a index page')}
+exports.index = (req,res) => {
+res.send('should be a index page')}
 
 // list texts
 exports.text_list = (req, res) => { res.send('shold be text list') }

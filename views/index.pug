@@ -1,5 +1,20 @@
-extends layout
+//-
+//extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
+//block content
+//  h1= title
+//  p Welcome to #{title}
+doctype html
+style
+	include ../public/stylesheets/main.css
+nav
+	li 
+		a(href='/login') 登录(L)
+article
+	section(class='previous-bt') &lt;
+	section(class='content') 我在美国吃过最臭的“气死”（干酪），洋人多闻之掩鼻，对我说起来实在没有什么，比臭豆腐差远了。 甚矣，中国人口味之杂也，敢说堪为世界之冠。
+	section(class='next-bt') &gt;
+section(class='links')
+	a 收藏夹(B)
+	|
+	a 设置(S)
