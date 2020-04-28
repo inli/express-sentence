@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	title= title
+	section(class='commit_list')
+		each val in [1,2,3,4,5]
+			section
+				p='commit'+ val
+				a(href='/catalog/commit/:id/delete') delete
+				a(href='/catalog/commit/:id/detail') detail
+				a(href='/catalog/commit/:id/update') update

@@ -10,11 +10,11 @@ router.get('/',text_controller.index);
 
 router.get('/texts',text_controller.text_list);
 
-router.get('/text/:id',text_controller.text_detail);
 
 router.get('/text/create',text_controller.text_create_get);
 router.post('/text/create',text_controller.text_create_post);
 
+router.get('/text/:id/detail',text_controller.text_detail);
 router.get('/text/:id/delete',text_controller.text_delete_get);
 router.post('/text/:id/delete',text_controller.text_delete_post);
 
@@ -32,7 +32,7 @@ router.post('/user/:id/update',user_controller.user_update_post);
 
 //commit
 router.get('/commits',commit_controller.commit_list);
-router.get('/commit/:id',commit_controller.commit_detail);
+router.get('/commit/:id/detail',commit_controller.commit_detail);
 router.get('/commit/create',commit_controller.commit_create_get);
 router.post('/commit/create',commit_controller.commit_create_post);
 router.get('/commit/:id/delete',commit_controller.commit_delete_get);

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	title= title
+	section(class='user_list')
+		each val in [1,2,3,4,5]
+			section
+				p= 'user'+ val
+				a(href='/catalog/user/:id/delete') delete
+				a(href='/catalog/user/:id/update') update

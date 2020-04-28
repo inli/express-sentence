@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	title= title 
+	section(class='list')
+		each val in [1,2,3,4,5]
+			section
+				p= val
+				a(href='/catalog/text/:id/delete') delete
+				a(href='/catalog/text/:id/detail') detail
+				a(href='/catalog/text/:id/update') update
