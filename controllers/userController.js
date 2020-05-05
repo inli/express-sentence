@@ -1,8 +1,15 @@
 const User = require('../models/user');
 
 //show user list
-exports.user_list = (req,res) => {
-res.render('users',{title:'user list'});
+exports.user_list = (req,res,next) => {
+	User.find({},'userid')
+		.exec(function (err, list_users){
+			if(err){return next(err);}
+			//successful so render
+			res.render('users',{title:'users',user_list:list_users});
+		})
+
+
 }
 
 //show user_create form by get

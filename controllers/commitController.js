@@ -2,10 +2,15 @@ const Commit = require('../models/commit');
 
 //show commit list
 exports.commit_list = (req,res) => {
-res.render('commits',{title:'commit list'});
-//res.send('should be a commit list')
-}
+	Commit.find({},'src user content update')
+		.populate('src user')
+		.exec(function (err, list_commits){
+			if(err){return next(err);}
+			//successful so render
+			res.render('commits',{title:'commits',commit_list:list_commits});
 
+		});
+}
 //show commit list
 exports.commit_detail = (req,res) => {
 res.render('commitDetail',{title:'commit detail'});

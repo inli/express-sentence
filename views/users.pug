@@ -3,8 +3,9 @@ extends layout
 block content
 	title= title
 	section(class='user_list')
-		each val in [1,2,3,4,5]
+		each user in user_list
 			section
-				p= 'user'+ val
+				p= 'userid:'+ user.userid
+				p= user._id
 				a(href='/catalog/user/:id/delete') delete
 				a(href='/catalog/user/:id/update') update

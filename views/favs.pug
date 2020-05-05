@@ -1,0 +1,11 @@
+doctype html
+
+title= title
+section(class='fav_list')
+	each val in [1,2,3,4,5]
+		section
+			p='fav-sentence'+ val
+			p='fav-commit' + val
+			a(href='fav/:id/delete') delete
+			a(href='fav/:id/detail') detail
+			a(href='fav/:id/update') update

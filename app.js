@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var coolRouter = require('./routes/cool');
 const catalogRouter = require('./routes/catalog');
 const loginRouter = require('./routes/login');
+const favRouter = require('./routes/fav');
 var app = express();
 
 
@@ -32,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/fav', favRouter);
 app.use('/users/cool',coolRouter);
 app.use('/catalog',catalogRouter);
 app.use('/login',loginRouter);

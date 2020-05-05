@@ -1,6 +1,6 @@
-form
-	| title
-	input(value='text_title')
-	| content
-	input(value='text_content')
+form(method='POST' action='')
+	label title:
+	input(name='text_title' value=(undefined===text? '' : text.title))
+	label content:
+	input(name='text_content' value=(undefined===text? '' : text.content))
 	input(type='submit' value='submit')

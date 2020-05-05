@@ -3,9 +3,12 @@ extends layout
 block content
 	title= title
 	section(class='commit_list')
-		each val in [1,2,3,4,5]
+		each commit in commit_list
 			section
-				p='commit'+ val
+				p='src:'+ commit.src.title
+				p='user:'+ commit.user.userid
+				p='content:'+ commit.content
+				p='update:'+ commit.update
 				a(href='/catalog/commit/:id/delete') delete
 				a(href='/catalog/commit/:id/detail') detail
 				a(href='/catalog/commit/:id/update') update
